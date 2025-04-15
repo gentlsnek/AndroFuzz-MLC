@@ -109,16 +109,7 @@ class APKPreprocessor:
 if __name__ == "__main__":
     # List of dataset paths
     dataset_paths = [
-        r".\datasets\Ransomware-APKs\Ransomware\Charger",
-        r".\datasets\Ransomware-APKs\Ransomware\Jisut",
-        r".\datasets\Ransomware-APKs\Ransomware\Koler",\
-        r".\datasets\Ransomware-APKs\Ransomware\LockerPin",
-        r".\datasets\Ransomware-APKs\Ransomware\Simplocker",
-        r".\datasets\Ransomware-APKs\Ransomware\Wannalocker",
-        r".\datasets\Ransomware-APKs\Ransomware\Pletor",
-        r".\datasets\Ransomware-APKs\Ransomware\PornDroid",
-        r".\datasets\Ransomware-APKs\Ransomware\RansomBO",
-        r".\datasets\Ransomware-APKs\Ransomware\Svpeng",
+        r"risky_apps"
     ]
 
     # Output directory for processed data
