@@ -2,7 +2,7 @@ import os
 import pandas as pd
 
 # Define the directory where the CSV files are stored using a raw string to avoid escape issues.
-data_dir = r".\processed_data"
+data_dir = r'./processed_data'
 
 # Define the file names along with their corresponding labels.
 # Here, the keys are only the file names (without any directory path) because data_dir handles the location.
@@ -12,7 +12,9 @@ files_labels = {
     "apk_features_ransomware.csv": "ransomware",
     "apk_features_scareware.csv": "scareware",
     "apk_features_smsmalware.csv": "smsmalware",
-    "benign 2017.csv": "benign"
+    "benign 2017.csv": "benign",
+    "apk_features_risky.csv": "risky"
+    
 }
 
 # Dictionary to store each DataFrame.
@@ -59,6 +61,6 @@ merged_df = pd.concat(standardized_dfs, axis=0, ignore_index=True)
 print(f"Merged dataset shape: {merged_df.shape}")
 
 # Save the merged DataFrame to a new CSV file in the same directory.
-output_file = os.path.join(data_dir, "merged_cic_andmal2017.csv")
+output_file = os.path.join(data_dir, "merged_cic_andmal2017_risky.csv")
 merged_df.to_csv(output_file, index=False)
 print(f"Merged dataset saved to {output_file}")

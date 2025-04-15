@@ -5,7 +5,7 @@ from sklearn.preprocessing import StandardScaler
 # -------------------------------
 # 1. Load the Merged Dataset
 # -------------------------------
-df = pd.read_csv("updated_merged_cic_andmal2017.csv")
+df = pd.read_csv("merged_cic_andmal2017_risky.csv")
 print("Initial shape:", df.shape)
 print(df.info())
 
@@ -76,7 +76,7 @@ df = pd.get_dummies(df, columns=categorical_cols, drop_first=True)
 # -------------------------------
 # 8. Save the Cleaned Dataset
 # -------------------------------
-cleaned_file = "cleaned_dataset.csv"
+cleaned_file = "cleaned_dataset_risky.csv"
 df.to_csv(cleaned_file, index=False)
 print("Cleaned dataset saved to", cleaned_file)
 print("Final shape:", df.shape)
